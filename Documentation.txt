@@ -1,0 +1,95 @@
+Source Code with Documentation
+Django Project Structure:
+markdown
+Copy code
+project/
+│
+├── api/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── BS/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── db.sqlite3
+├── manage.py
+└── requirements.txt
+api/: Contains Django app for API endpoints.
+BS/: Django project settings.
+db.sqlite3: SQLite database file.
+manage.py: Django management script.
+requirements.txt: File containing project dependencies.
+Documentation:
+api/views.py: Contains views for handling API endpoints, including user registration, login, and employee CRUD operations.
+api/serializers.py: Contains serializers for converting Django models to/from JSON format.
+api/models.py: Contains Django models for Employee and CustomUser.
+BS/settings.py: Contains Django project settings, including authentication and middleware configuration.
+requirements.txt: File listing project dependencies.
+Instructions for Setup and Running the Application:
+Clone the repository:
+
+bash
+Copy code
+git clone <repository_url>
+cd <project_directory>
+Set up a virtual environment (optional but recommended):
+
+bash
+Copy code
+python3 -m venv env
+source env/bin/activate  # On Windows, use `env\Scripts\activate`
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+Apply database migrations:
+
+bash
+Copy code
+python manage.py migrate
+Create a superuser (admin) to access the Django admin interface:
+
+bash
+Copy code
+python manage.py createsuperuser
+Run the development server:
+
+bash
+Copy code
+python manage.py runserver
+Access the API endpoints in a web browser or through tools like Postman:
+
+Admin login: http://127.0.0.1:8000/admin/
+API endpoints:
+Employee List: http://127.0.0.1:8000/api/employees/
+Employee Detail: http://127.0.0.1:8000/api/employees/{id}/
+User Registration: http://127.0.0.1:8000/register/
+User Login: http://127.0.0.1:8000/login/
+Role-Based Access Control Demonstration:
+Example:
+Admin Role: Can perform all CRUD operations on employees.
+
+Access Employee List: http://127.0.0.1:8000/api/employees/
+Access Employee Detail: http://127.0.0.1:8000/api/employees/{id}/
+Add a New Employee: http://127.0.0.1:8000/api/employees/ (POST)
+Update an Employee: http://127.0.0.1:8000/api/employees/{id}/ (PUT)
+Delete an Employee: http://127.0.0.1:8000/api/employees/{id}/ (DELETE)
+Manager Role: Can access Employee List and Add a New Employee.
+
+Access Employee List: http://127.0.0.1:8000/api/employees/
+Add a New Employee: http://127.0.0.1:8000/api/employees/ (POST)
+Employee Role: Can only access Employee List.
+
+Access Employee List: http://127.0.0.1:8000/api/employees/
+Conclusion:
+This submission includes the source code, documentation, setup instructions, and a demonstration of role-based access control for the given Django application. The application provides different levels of access to users based on their roles, ensuring proper security measures.
