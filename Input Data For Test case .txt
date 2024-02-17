@@ -1,0 +1,24 @@
+# Use thunder client to test the api
+
+Input Data For Test case 
+
+Register as Employee:-
+{"username": "test1", "password": "test123", "email": "test1@example.com","role":"Employee"}
+
+Register as Manager:-
+{"username": "test2", "password": "test123", "email": "test2example.com","role":"Manager"}
+
+Register as Admin:-
+{"username": "test3", "password": "test123", "email": "test3@example.com","role":"Admin"}
+
+
+Employee Data :
+{
+        "url": "http://127.0.0.1:8000/api/employees/3/",
+        "Employee_id": 3,
+        "Employee_name": "Ayush raj Goyal",
+        "Employee_email": "goyalayush@gmail.com",
+        "Employee_role": "Back-end Developer",
+        "Created_at": "2024-02-17T13:55:43.877493Z"
+    }
+
